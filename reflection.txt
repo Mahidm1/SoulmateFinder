@@ -1,0 +1,11 @@
+The SoulmateFinder program is a short program contained in a single class. It is a small system that helps travellers to quickly locate their potential soulmate by tracking their fellow passengers to continue their conversation.
+
+The code is separated into three methods: overlappingJourneys, getTravellers, main and overlappingLongJourneys.
+The overlappingJourners method takes 4 int arguments that represent 2 time periods, the beginning and end of 2 different journeys. Then it returns it as true if both of the journeys overlapped.
+The getTravellers method takes 2 int arguments representing the start and end of a journey when the traveller met their soulmate. This is done by using 1 input method to find out the overall number of travellers on the train and then an additional 3 inputs asking about the travellers’ journey. A Scanner object kbd is used because using multiple scanners on System.in can cause unexpected behaviours, this single Scanner object is passed to each method that needs it. A for loop was used to make sure it can be used for every traveller. I used a for loop here as I knew for how long I wanted this loop to be active for and when to stop which the for loop allows me to do. The two key variables are travellers and found. The travellers variable stored the list of travellers on the train and the found variable was used to indicate how many soulmates there are on the train. This then returns an int value of how many travellers might be the soulmate.
+The main method finds out the traveller’s whole journey, by finding out the start and end of their journey. The we used the getTravellers method to read the list of travellers on the train and print out who might be the potential soulmate. 
+Finally, the overlappingLongJourneys method was used to find travellers that have talked to their potential soulmates for at least 3 stations. This method was used to work like the overlappingJourneys method but adding another parameter n which represents number of times the two journeys overlapped. We used the following method Math.min and Math.max to find the max of the start of the journey and the min of the end of the journey. We applied a condition that only returns true if the journeys overlapped when n is greater than or equal to 1.
+
+
+
+
